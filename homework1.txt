@@ -1,0 +1,62 @@
+# 作业1
+## 按顺序打印出App、ViewController生命周期的各个事件
+App生命周期的各个事件：
+```
+1.点击程序图标
+2.执行main函数
+3.通过UIApplicationMain函数
+4.初始化UIApplication对象并且为它设置代理对象
+5.UIApplication对象（监听系统事件）
+6.程序结束退出
+```
+ViewController生命周期的各个事件:
+```
+1.alloc/init1
+2.loadView
+3.viewDidload
+4.viewWillLoad
+5.viewDidAppear
+6.viewWillDisappear
+7.viewDidDisappear
+8.dealloc
+```
+## 写出五种常用的UI控件
+1.UIScrollView<br>
+2.UITableView<br>
+3.UICollectionView<br>
+4.UIWebView & WKWebView<br>
+5.UIImageViews:显示图片
+## 列举出三个UItableViewDelegate声明的方法
+```
+1.定义每个UITableView中的cell的行高
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+
+  // indexPath.section,根据分组进行更精确的配置
+
+  return 90.0;
+
+}
+
+
+2.设置UITableView每个分组的Header的Title
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+
+    return [_arrayType objectAtIndex:section];
+
+
+
+}
+
+
+3.设置UITableView分组Header的高
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+
+    return 30.0;
+
+}
+```
