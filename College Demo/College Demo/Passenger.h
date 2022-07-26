@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Orders : NSObject
 @property (nonatomic,copy) NSString *origin;//始发地
 @property (nonatomic,copy) NSString *destination;//目的地
+@property (nonatomic,copy) BOOL *used;//是否已使用
 @end
 
 @interface Passenger : Person
