@@ -9,10 +9,11 @@
 
 
 @implementation Orders
--(void)addMessage:(NSString *)origin destination:(NSString *)destination
+-(void)addMessage:(NSString *)origin destination:(NSString *)destination used:(BOOL *)used
 {
   self.origin = origin;
   self.destination  = destination;
+  self.used = used;
 }
 @end
 
@@ -20,13 +21,14 @@
 //订票
 -(BOOL)toBookTicket:(Order *)ticket
 {
-  [unusedOrders addObjectsFromArray:ticket];
+  [unusedOrder addObjectsFromArray:ticket];
 }
 //检票
 -(BOOL)toCheckTicket:(Order *)ticket
 {
-  if()
-    return true;
-   return false;
+  //if(used == false)
+    //return true;
+   //return false;
+   return !used;
 }
 @end
